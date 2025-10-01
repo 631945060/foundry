@@ -24,7 +24,5 @@ contract CounterScript is Script {
         // 停止广播
         vm.stopBroadcast();
         
-        // 输出部署地址
-        console.log("Counter deployed at:", address(counter));
     }
 }
