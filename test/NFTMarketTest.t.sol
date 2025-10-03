@@ -11,10 +11,12 @@ contract NFTMarketTest is Test, IERC721Receiver {
     NFTMarket market;
     MyNFT myNFT;
     MoonToken moonToken;
-    address user1 = address(0x1);
-    address user2 = address(0x2);
+    address owner = address(0x1);
+    address user1 = address(0x2);
+    address user2 = address(0x3);
 
     function setUp() public {
+        vm.prank(owner);
         //创建代币合约
         moonToken = new MoonToken();
         //创建市场合约
